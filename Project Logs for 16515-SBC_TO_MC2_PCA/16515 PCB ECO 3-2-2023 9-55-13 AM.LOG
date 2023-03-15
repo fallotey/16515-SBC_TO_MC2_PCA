@@ -1,0 +1,29 @@
+Added Component: Designator=U3(20-WFQFN)
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Analog Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "LTC4331CUFD#PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=6.84000, 10=6.17600, 25=5.88880, 100=4.88340, 250=4.45252, 500=4.16528, 1000=3.79400 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "282"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LTC4331CUFD#PBF-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3V Pin=U3-1
+Added Pin To Net: NetName=3.3V Pin=U3-2
+Added Pin To Net: NetName=I2C_EN Pin=U3-3
+Added Pin To Net: NetName=NetR10_2 Pin=U3-4
+Added Pin To Net: NetName=NetLED2_2 Pin=U3-5
+Added Pin To Net: NetName=I2C_RDY Pin=U3-6
+Added Pin To Net: NetName=I2C_SCL Pin=U3-7
+Added Pin To Net: NetName=I2C_SDA Pin=U3-8
+Added Pin To Net: NetName=NetR8_1 Pin=U3-10
+Added Pin To Net: NetName=GND Pin=U3-11
+Added Pin To Net: NetName=GND Pin=U3-12
+Added Pin To Net: NetName=R_CTRL Pin=U3-13
+Added Pin To Net: NetName=SPEED1 Pin=U3-14
+Added Pin To Net: NetName=SPEED2 Pin=U3-15
+Added Pin To Net: NetName=GND Pin=U3-16
+Added Pin To Net: NetName=3.3V Pin=U3-17
+Added Pin To Net: NetName=PC_P Pin=U3-18
+Added Pin To Net: NetName=PC_N Pin=U3-19
+Added Pin To Net: NetName=GND Pin=U3-EP
+Added Member To Class: ClassName=16515 Member=Component U3 LTC4331CUFD#PBF

@@ -1,0 +1,407 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file:///C:/Users/Public/Documents/Altium/AD23/Templates/AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3/15/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:38:41 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:/Users/FrancisAllotey/ROMTech/Engineering%20-%20Electrical%20-%20Electrical/PCB%20Layouts/16515-SBC_TO_MC2_PCA/16515-SBC_TO_MC2_PCA/16515-SBC_TO_MC2_PCA/16515.PcbDoc" class="file"><acronym title="C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc">C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">10</td></tr>
+</table>
+</td>
+</table><a name="IDGAFDBWXGBVE1N1JNY1XHFXFPJNX3XVLQ05CLONLW4JTJG01NLBEB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFXCYZOQSAQQNJE24SBYH0XDKZH2KAQ0HZ11PVXLAZKBQOUIN151N">Clearance Constraint (Gap=5mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1KWKYNDK0AMTODFMDNNCPHFGJKE2GB1GWL0KP1AM0LGKAAPX3P">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQV4INRKWVLZ3E1GWKZ4ZOLM1HMZNLRX3IW0TKLM4MR0ZBXDXFVKI">Short-Circuit Constraint (Allowed=Yes) (InNet('RF') and InPadClass('A1-ANT')),(InNet('GND'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZBUMOHEJQGHWJXX2NMTEGI5NOGHCAAUWHCY2N3K3VVYGLM50HIXO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRIACYEOS20M3BXSNHRZSTAK0UDKXDFRABMH4GBDNMYSGRXKR3QZI">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZUUP3XDDYZNQM2ISHID0USPUOJJYJBCSOIRIFHCJSVXXZA0SXFN">Width Constraint (Min=5mil) (Max=40mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVPK5GOGDIRB4IYGXSRTCH1UXM5ULNFMBBVEVZJW0NFCBJBGRN">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSDZPAJ5OZRZYDAEG0WUYIBRWWLVUUSXRZIKKQ2H4GMUXR01O5EFI">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InComponent('U1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1W1KHKV1S2UEHMWCQO5HQ3UP3GEU0T41MVCN4LFLG0XI21PY11CG">Hole Size Constraint (Min=1mil) (Max=200mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZUEUP4WKESCBNPGFPNK3M3YGND5PIZRX5V0SKVPHNJIDFPRAOMMJ">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX1MLN2EPU4I4FNF3RT4R0FILP2J1MU32VZXLVC3XRFWZVXB2NBN">Minimum Solder Mask Sliver (Gap=0mil) (TouchesRoom('U3_room')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWNGA35CEK1CTKB3ZPNGPKQ4I3G2PLYSGIVFE3WI53XKJVMZEYSYO">Minimum Solder Mask Sliver (Gap=0mil) (TouchesRoom('J3_room')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEDZJSY3UKJ5XGUFZP0U4E3G4KHKEJSUQVW44TRB204AZJVFV0FNH">Minimum Solder Mask Sliver (Gap=2mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCOU1UX1NJRWZHZBCHT1WFAV33HEXSQUHYFLBCNCSXZKEABCGPNO">Silk To Solder Mask (Clearance=5mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3I1ESEDTO0DNMRZPUEOGOV5VQKSXVYH5LATMF4FMGMLTC13KSM0C">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1UDKTBR1Q1BXFUHJVFBZNRLWZNHCJBLO0YABUIH4QR1DWPP1XIXE">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCBCNM21AJDKXHYHWD0V4R2TCUI0JHWYDOTKR00MAZWFSJUROA3SK">Room J3_room (Bounding Region = (3mil, 5555mil, 759mil, 6463mil) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2JM2GYLQT02ALCEJS1GPD0AHSEDI2I4U3MHCLMK4SSOIKVHVWTHN">Room U3_room (Bounding Region = (926mil, 5961mil, 1224mil, 6214mil) (False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB0VGKAKHPTYVIM2OPFZZIFSLNG00ZIITVPSTXLBO5VAAMWFKHGVE">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZXAKY21QGYSVFSBFJB231HLLXHJ3NW24FYBMOLGS55FIMDJYBZBC">Clearance Constraint (Gap=5mil) (All),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQYGHORVEZBENIRWOLKBXTXWHFOGFAGISL2MP4NDAJYEL5KIU1NJN">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">10</td>
+</tr>
+</table><br><a name="IDEBRESVG5QX0MOW0SUFBFOXU4BL1AKYVMTC2MMLCPU4HPZCM1FAGF"><h2>Rule Violations</h2></a><a name="IDM0BFCS23QLIMOLNNFH3ZQFKC2OG1GGW45PWGE2DOFGGM0OZSTNYJ"><h2>Waived Violations</h2></a><a name="IDZXAKY21QGYSVFSBFJB231HLLXHJ3NW24FYBMOLGS55FIMDJYBZBC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Clearance Constraint (Gap=5mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7138.833mil|Location2.Y=7143.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7138.833mil|Location2.Y=7143.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad A1-ANT(1867mil,2281mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Francis Allotey at 3/13/2023 4:01:09 PM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7138.833mil|Location2.Y=7143.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7138.833mil|Location2.Y=7143.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad A1-ANT(1867mil,2281mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Francis Allotey at 3/13/2023 4:00:30 PM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=215.576mil|Location2.X=221.826mil|Location1.Y=6361.245mil|Location2.Y=6367.495mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=215.576mil|Location2.X=221.826mil|Location1.Y=6361.245mil|Location2.Y=6367.495mil|Absolute=True">Clearance Constraint: (4.787mil &lt; 5mil) Between Pad J3-(218.701mil,1448mil) on Multi-Layer And Pad J3-SH1(218.701mil,1550.264mil) on Top Layer </acronym></a><br>Waived by Francis Allotey at 3/13/2023 4:00:49 PM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=215.576mil|Location2.X=221.826mil|Location1.Y=5728.505mil|Location2.Y=5734.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=215.576mil|Location2.X=221.826mil|Location1.Y=5728.505mil|Location2.Y=5734.755mil|Absolute=True">Clearance Constraint: (4.787mil &lt; 5mil) Between Pad J3-(218.701mil,948mil) on Multi-Layer And Pad J3-SH2(218.701mil,845.736mil) on Top Layer </acronym></a><br>Waived by Francis Allotey at 3/10/2023 10:15:11 AM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1864.833mil|Location2.X=1869.167mil|Location1.Y=7138.676mil|Location2.Y=7143.009mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1864.833mil|Location2.X=1869.167mil|Location1.Y=7138.676mil|Location2.Y=7143.009mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Top Layer And Track (1867mil,2236.335mil)(1867mil,2281mil) on Top Layer </acronym></a><br>Waived by Francis Allotey at 3/14/2023 11:57:00 AM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7119.148mil|Location2.Y=7123.482mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1854.833mil|Location2.X=1859.167mil|Location1.Y=7119.148mil|Location2.Y=7123.482mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Top Layer And Track (1867mil,2236.335mil)(1867mil,2281mil) on Top Layer </acronym></a><br>Waived by Francis Allotey at 3/14/2023 11:56:56 AM<br>This is not a violation</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQYGHORVEZBENIRWOLKBXTXWHFOGFAGISL2MP4NDAJYEL5KIU1NJN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1855.499mil|Location2.X=1868.501mil|Location1.Y=7134.421mil|Location2.Y=7147.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1855.499mil|Location2.X=1868.501mil|Location1.Y=7134.421mil|Location2.Y=7147.422mil|Absolute=True">Short-Circuit Constraint: Between Pad A1-ANT(1867mil,2281mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 1862mil][Y = 7140.921mil]</acronym></a><br>Waived by Francis Allotey at 3/10/2023 10:04:54 AM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.446mil|Location2.X=1882.396mil|Location1.Y=7115.682mil|Location2.Y=7146.633mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.446mil|Location2.X=1882.396mil|Location1.Y=7115.682mil|Location2.Y=7146.633mil|Absolute=True">Short-Circuit Constraint: Between Pad A1-ANT(1867mil,2281mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 1866.921mil][Y = 7131.158mil]</acronym></a><br>Waived by Francis Allotey at 3/10/2023 10:04:41 AM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1863.64mil|Location2.X=1868.508mil|Location1.Y=7138.531mil|Location2.Y=7143.398mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1863.64mil|Location2.X=1868.508mil|Location1.Y=7138.531mil|Location2.Y=7143.398mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (1867mil,2236.335mil)(1867mil,2281mil) on Top Layer Location : [X = 1866.074mil][Y = 7140.964mil]</acronym></a><br>Waived by Francis Allotey at 3/14/2023 11:38:41 AM<br>This is not a violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.416mil|Location2.X=1882.427mil|Location1.Y=7115.695mil|Location2.Y=7146.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\FrancisAllotey\ROMTech\Engineering - Electrical - Electrical\PCB Layouts\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515-SBC_TO_MC2_PCA\16515.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1851.416mil|Location2.X=1882.427mil|Location1.Y=7115.695mil|Location2.Y=7146.706mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (1867mil,2236.335mil)(1867mil,2281mil) on Top Layer Location : [X = 1866.921mil][Y = 7131.201mil]</acronym></a><br>Waived by Francis Allotey at 3/14/2023 11:38:13 AM<br>This is not a violation</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,13 @@
+Added Component: Designator=J8(3_POS_Header)
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "61300311121"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetJ8_1 Pin=J8-1
+Added Pin To Net: NetName=NetJ8_1 Pin=R10-2
+Added Net: Name=NetJ8_1
+Added Pin To Net: NetName=NetJ8_3 Pin=J8-3
+Added Pin To Net: NetName=NetJ8_3 Pin=R13-2
+Added Net: Name=NetJ8_3
+Added Pin To Net: NetName=REM Pin=J8-2
+Added Pin To Net: NetName=REM Pin=U3-4
+Added Net: Name=REM
+Added Member To Class: ClassName=16515 Member=Component J8 3 POS Header 

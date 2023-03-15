@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=AUX_TP3 Pin=U1-12
+Change Component Designator: OldDesignator=J? NewDesignator=J7
+Change Component Designator: OldDesignator=TP? NewDesignator=TP9
+Added Pin To Net: NetName=/ALERT Pin=R8-1
+Added Pin To Net: NetName=/ALERT Pin=U1-12
+Added Pin To Net: NetName=/ALERT Pin=U3-10
+Added Net: Name=/ALERT

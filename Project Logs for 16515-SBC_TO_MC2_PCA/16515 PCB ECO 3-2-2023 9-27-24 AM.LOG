@@ -1,0 +1,78 @@
+Removed Pin From Net: NetName=I2C_SCL Pin=TP16-1
+Removed Pin From Net: NetName=I2C_EN_ACC Pin=TP17-1
+Removed Pin From Net: NetName=I2C_SDA Pin=TP18-1
+Removed Pin From Net: NetName=I2C_EN Pin=TP19-1
+Removed Pin From Net: NetName=SPEED1 Pin=TP20-1
+Removed Pin From Net: NetName=SPEED2 Pin=TP21-1
+Removed Pin From Net: NetName=nRF_RESET Pin=TP22-1
+Removed Pin From Net: NetName=I2C_RDY Pin=TP23-1
+Removed Pin From Net: NetName=R_CTRL Pin=TP24-1
+Removed Pin From Net: NetName=AUX_TP5 Pin=U1-6
+Removed Member From Class: ClassName=16515 Member=TP16
+Removed Member From Class: ClassName=16515 Member=TP17
+Removed Member From Class: ClassName=16515 Member=TP18
+Removed Member From Class: ClassName=16515 Member=TP19
+Removed Member From Class: ClassName=16515 Member=TP20
+Removed Member From Class: ClassName=16515 Member=TP21
+Removed Member From Class: ClassName=16515 Member=TP22
+Removed Member From Class: ClassName=16515 Member=TP23
+Removed Member From Class: ClassName=16515 Member=TP24
+Add Component: Footprint Not Found Amphenol_95278-101A10LF_0
+Add Component: Footprint Not Found Amphenol_95278-101A10LF_0
+Add Component: Footprint Not Found 20-WFQFN
+Add Pin To Net: Unknown Pin: Pin J2-1
+Add Pin To Net: Unknown Pin: Pin J2-2
+Add Pin To Net: Unknown Pin: Pin J2-3
+Add Pin To Net: Unknown Pin: Pin J2-4
+Add Pin To Net: Unknown Pin: Pin J2-5
+Add Pin To Net: Unknown Pin: Pin J2-6
+Add Pin To Net: Unknown Pin: Pin J2-7
+Add Pin To Net: Unknown Pin: Pin J2-8
+Add Pin To Net: Unknown Pin: Pin J2-9
+Add Pin To Net: Unknown Pin: Pin J2-10
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-3
+Add Pin To Net: Unknown Pin: Pin J4-4
+Add Pin To Net: Unknown Pin: Pin J4-5
+Add Pin To Net: Unknown Pin: Pin J4-6
+Add Pin To Net: Unknown Pin: Pin J4-7
+Add Pin To Net: Unknown Pin: Pin J4-8
+Add Pin To Net: Unknown Pin: Pin J4-9
+Add Pin To Net: Unknown Pin: Pin J4-10
+Added Pin To Net: NetName=3.3V Pin=LED1-1
+Added Pin To Net: NetName=NetQ4_1 Pin=Q4-1
+Added Pin To Net: NetName=GND Pin=Q4-2
+Added Pin To Net: NetName=E-STP_STATUS Pin=Q4-3
+Added Pin To Net: NetName=3.3V Pin=R18-1
+Added Pin To Net: NetName=E-STP_STATUS Pin=R18-2
+Added Pin To Net: NetName=NetQ4_1 Pin=R19-1
+Added Pin To Net: NetName=NetJ5_1 Pin=R19-2
+Added Pin To Net: NetName=NetQ4_1 Pin=R20-1
+Added Pin To Net: NetName=GND Pin=R20-2
+Added Pin To Net: NetName=AUX_TP6 Pin=U1-6
+Add Pin To Net: Unknown Pin: Pin U3-1
+Add Pin To Net: Unknown Pin: Pin U3-2
+Add Pin To Net: Unknown Pin: Pin U3-3
+Add Pin To Net: Unknown Pin: Pin U3-4
+Add Pin To Net: Unknown Pin: Pin U3-5
+Add Pin To Net: Unknown Pin: Pin U3-6
+Add Pin To Net: Unknown Pin: Pin U3-7
+Add Pin To Net: Unknown Pin: Pin U3-8
+Add Pin To Net: Unknown Pin: Pin U3-10
+Add Pin To Net: Unknown Pin: Pin U3-11
+Add Pin To Net: Unknown Pin: Pin U3-12
+Add Pin To Net: Unknown Pin: Pin U3-13
+Add Pin To Net: Unknown Pin: Pin U3-14
+Add Pin To Net: Unknown Pin: Pin U3-15
+Add Pin To Net: Unknown Pin: Pin U3-16
+Add Pin To Net: Unknown Pin: Pin U3-17
+Add Pin To Net: Unknown Pin: Pin U3-18
+Add Pin To Net: Unknown Pin: Pin U3-19
+Add Pin To Net: Unknown Pin: Pin U3-EP
+Add Class Member: Failed to add class member : Component J2 95278-101A10LF
+Add Class Member: Failed to add class member : Component J4 95278-101A10LF
+Added Member To Class: ClassName=16515 Member=Component Q4 BSS138K
+Added Member To Class: ClassName=16515 Member=Component R18 2K
+Added Member To Class: ClassName=16515 Member=Component R19 10K
+Added Member To Class: ClassName=16515 Member=Component R20 1.5 K
+Add Class Member: Failed to add class member : Component U3 LTC4331CUFD#PBF

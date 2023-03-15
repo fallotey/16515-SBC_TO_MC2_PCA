@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=I2C_SDA Pin=TP9-1
+Removed Pin From Net: NetName=I2C_EN Pin=TP10-1
+Removed Pin From Net: NetName=PC_P Pin=TP11-1
+Removed Pin From Net: NetName=I2C_SCL Pin=TP12-1
+Removed Pin From Net: NetName=PC_N Pin=TP13-1
+Removed Member From Class: ClassName=16515 Member=TP9
+Removed Member From Class: ClassName=16515 Member=TP10
+Removed Member From Class: ClassName=16515 Member=TP11
+Removed Member From Class: ClassName=16515 Member=TP12
+Removed Member From Class: ClassName=16515 Member=TP13
+Added Component: Designator=TP?(Test Point)
+Added Pin To Net: NetName=E-STP_STATUS Pin=J?-3
+Added Pin To Net: NetName=PC_P Pin=J?-8
+Added Pin To Net: NetName=PC_N Pin=J?-10
+Added Pin To Net: NetName=PS_ON Pin=TP?-1
+Added Member To Class: ClassName=16515 Member=Component TP? =VALUE

@@ -1,0 +1,136 @@
+Add Component: Footprint Not Found BLE Antenna
+Add Component: Footprint Not Found CAPC0603X10N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0603X10N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0603X10N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0603X10N
+Add Component: Footprint Not Found CAPC0603X10N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found CAPC0402X06N
+Add Component: Footprint Not Found SOD-123/Mini-SMA
+Add Component: Footprint Not Found FUSE2920
+Add Component: Footprint Not Found TC2030-IDC-NL
+Add Component: Footprint Not Found Amphenol_95278-101A10LF_0
+Add Component: Footprint Not Found TE_6339160-1
+Add Component: Footprint Not Found Amphenol_95278-101A10LF_0
+Add Component: Footprint Not Found SM02B-PASS-TBT(LF)(SN)
+Add Component: Footprint Not Found SM02B-PASS-TBT(LF)(SN)
+Add Component: Footprint Not Found INDC0402X04N
+Add Component: Footprint Not Found INDC0603X10N
+Add Component: Footprint Not Found INDC0402X04N
+Add Component: Footprint Not Found ASMB-KTF0-0A306
+Add Component: Footprint Not Found 0603
+Add Component: Footprint Not Found 0603
+Add Component: Footprint Not Found NET TIE 2mm
+Add Component: Footprint Not Found SOT23
+Add Component: Footprint Not Found SOT23
+Add Component: Footprint Not Found SOT23
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0603X06N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0603X06N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC0603X06N
+Add Component: Footprint Not Found RESC0402X04N
+Add Component: Footprint Not Found RESC1206X09N
+Add Component: Footprint Not Found RESC0805X06N
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found Test Point
+Add Component: Footprint Not Found QFN40P600X600X90-48N
+Add Component: Footprint Not Found XDFN6_1P5X1P5_ONS-L
+Add Component: Footprint Not Found 20-WFQFN
+Add Component: Footprint Not Found BT-XTAL_2016
+Added Net: Name=3.1V_BAT
+Added Net: Name=3.3V
+Added Net: Name=24V_OUT_TABLET
+Added Net: Name=AGND
+Added Net: Name=AUX_TP0
+Added Net: Name=AUX_TP1
+Added Net: Name=AUX_TP2
+Added Net: Name=AUX_TP3
+Added Net: Name=AUX_TP4
+Added Net: Name=AUX_TP5
+Added Net: Name=AUX_TP6
+Added Net: Name=AUX_TP7
+Added Net: Name=DEC1
+Added Net: Name=DEC3
+Added Net: Name=GND
+Added Net: Name=I2C_EN_ACC
+Added Net: Name=I2C_EN
+Added Net: Name=I2C_RDY
+Add Net: Net with name "I2C_RDY" already exists
+Added Net: Name=I2C_SCL
+Added Net: Name=I2C_SDA
+Added Net: Name=L_BLUE
+Added Net: Name=L_GRN
+Added Net: Name=L_RED
+Added Net: Name=NetC1_2
+Added Net: Name=NetC5_1
+Added Net: Name=NetC10_2
+Added Net: Name=NetC11_1
+Added Net: Name=NetF1_1
+Added Net: Name=NetJ5_1
+Added Net: Name=NetJ6_2
+Added Net: Name=NetL1_2
+Added Net: Name=NetL2_2
+Added Net: Name=NetLED1_2
+Added Net: Name=NetLED1_3
+Added Net: Name=NetLED1_4
+Added Net: Name=NetLED2_1
+Added Net: Name=NetLED2_2
+Added Net: Name=NetLED3_1
+Added Net: Name=NetQ1_3
+Added Net: Name=NetQ2_3
+Added Net: Name=NetQ3_3
+Added Net: Name=NetR4_1
+Added Net: Name=NetR5_1
+Added Net: Name=NetR8_1
+Added Net: Name=NetR10_2
+Added Net: Name=nRF_RESET
+Added Net: Name=nRST
+Added Net: Name=PC_N
+Added Net: Name=PC_P
+Added Net: Name=PS_ON
+Added Net: Name=R_CTRL
+Added Net: Name=RF
+Added Net: Name=SPEED1
+Add Net: Net with name "SPEED1" already exists
+Added Net: Name=SPEED2
+Add Net: Net with name "SPEED2" already exists
+Added Net: Name=SWCLK_1
+Added Net: Name=SWDIO_1
+Added Net: Name=SWO_1
+Added Net: Name=XC1
+Added Net: Name=XC2
+Added Class: Name=Sheet1
+Added Differential Pair: Name=PC
+Added Room: Name=Sheet1
